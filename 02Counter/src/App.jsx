@@ -7,7 +7,16 @@ function App() {
   let [count, setCount] = useState(0);
 
   const increaseValue = () => {
-    setCount(count+1);
+    // setCount(count+1);
+    // setCount(count+1);
+    // setCount(count+1);
+    // setCount(count+1);
+    // this will only increase value one time becase useState set state in batches and it consider a one batch. so the way to do is bellow.
+    setCount(prevCount => prevCount+1);
+    setCount(prevCount => prevCount+1); 
+    setCount(prevCount => prevCount+1); 
+
+
   }
 
   const decreaseValue = () => {
